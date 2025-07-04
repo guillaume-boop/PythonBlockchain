@@ -36,13 +36,13 @@ if __name__ == "__main__":
                 print("Montant invalide.")
                 continue
             bc.add_transaction(sender, recipient, amount)
-            print("✅ Transaction ajoutée.")
+            print("Transaction ajoutée.")
 
         
         elif choix == "2":
             success = bc.mine_pending_transactions()
             if success:
-                print("✅ Bloc miné avec succès.")
+                print("Bloc miné avec succès.")
                 bc.save_to_file()
 
         elif choix == "3":
@@ -50,14 +50,13 @@ if __name__ == "__main__":
 
         elif choix == "4":
             if bc.is_chain_valid():
-                print("✅ La blockchain est valide.")
+                print("La blockchain est valide.")
             else:
-                print("❌ La blockchain est invalide.")
+                print("La blockchain est invalide.")
 
         elif choix == "5":
             bc.save_to_file()
-            print("💾 Blockchain sauvegardée.")
-            print("👋 Au revoir.")
+            print("Blockchain sauvegardée.")
             break
         
         elif choix == "6":
@@ -68,7 +67,7 @@ if __name__ == "__main__":
 
 
         else:
-            print("❌ Choix invalide.")
+            print("Choix invalide.")
 
         
         

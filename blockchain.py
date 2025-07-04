@@ -106,10 +106,10 @@ class Blockchain:
     def replace_chain(self, new_chain):
         if len(new_chain) > len(self.chain) and self.validate_chain(new_chain):
             self.chain = new_chain
-            print("✅ Chaîne remplacée par une version plus longue.")
+            print("Chaîne remplacée par une version plus longue.")
             return True
         else:
-            print("❌ Chaîne reçue invalide ou plus courte.")
+            print("Chaîne reçue invalide ou plus courte.")
             return False
 
 
@@ -126,7 +126,7 @@ class Blockchain:
 
     def load_external_chain(self, filename):
         if not os.path.exists(filename):
-            print("❌ Fichier de chaîne externe introuvable.")
+            print("Fichier de chaîne externe introuvable.")
             return None
 
         with open(filename, "r") as f:
