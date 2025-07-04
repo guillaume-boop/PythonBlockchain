@@ -19,6 +19,8 @@ class Blockchain:
         return self.chain[-1]
     
     def add_transaction(self, sender, recipient, amount):
+        if not sender or not recipient or amount <= 0:
+            raise ValueError("Transaction invalide : champ vide ou montant négatif")
         transaction = Transaction(sender, recipient, amount)
         self.pending_transactions.append(transaction)
 
